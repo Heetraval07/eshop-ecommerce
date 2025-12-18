@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Banner = ({ data }) => {
+  const navigate = useNavigate();
+
+  const handleShopNow = () => {
+    navigate("/shop");
+  };
+
   return (
     <div className="min-h-[550px] flex justify-center items-center py-12">
       <div className="container">
@@ -47,6 +54,7 @@ const Banner = ({ data }) => {
               <button
                 style={{ color: data.bgColor }}
                 className="bg-white py-2 px-4 rounded-full"
+                onClick={handleShopNow}
               >
                 Shop Now
               </button>

@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Image1 from "../../assets/category/earphone.png";
 import Image2 from "../../assets/category/watch.png";
 import Image3 from "../../assets/category/macbook.png";
 import Button from "../Shared/Button";
 
 const Category = () => {
+  const navigate = useNavigate();
+
+  const handleBrowse = () => {
+    navigate("/shop");
+  };
+
   return (
     <div className="py-8">
       <div className="container">
@@ -22,6 +29,7 @@ const Category = () => {
                   text="Browse"
                   bgColor={"bg-primary"}
                   textColor={"text-white"}
+                  handler={handleBrowse}
                 />
               </div>
             </div>
@@ -40,6 +48,7 @@ const Category = () => {
                   text="Browse"
                   bgColor={"bg-white"}
                   textColor={"text-brandYellow"}
+                  handler={handleBrowse}
                 />
               </div>
             </div>
@@ -62,6 +71,7 @@ const Category = () => {
                   text="Browse"
                   bgColor={"bg-white"}
                   textColor={"text-primary"}
+                  handler={handleBrowse}
                 />
               </div>
             </div>
