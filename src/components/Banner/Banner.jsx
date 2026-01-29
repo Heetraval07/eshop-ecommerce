@@ -9,11 +9,11 @@ const Banner = ({ data }) => {
   };
 
   return (
-    <div className="min-h-[550px] flex justify-center items-center py-12">
+    <div className="min-h-[550px] flex justify-center items-center py-8 sm:py-12">
       <div className="container">
         <div
           style={{ backgroundColor: data.bgColor }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-white rounded-3xl"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-white rounded-3xl overflow-hidden"
         >
           {/* first col */}
           <div className="p-6 sm:p-8">
@@ -32,11 +32,11 @@ const Banner = ({ data }) => {
             </p>
           </div>
           {/* second col */}
-          <div data-aos="zoom-in" className="h-full flex items-center">
+          <div data-aos="zoom-in" className="h-full flex items-center overflow-hidden">
             <img
               src={data.image}
               alt=""
-              className="scale-125 w-[250px] md:w-[340px] mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,.6)] object-cover"
+              className="scale-125 w-[250px] md:w-[340px] mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,.6)] object-cover max-w-full"
             />
           </div>
           {/* third col */}

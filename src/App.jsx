@@ -44,9 +44,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white duration-200 flex flex-col">
+    <div className="bg-slate-950 text-white duration-200 flex flex-col overflow-x-hidden">
       <Navbar handleOrderPopup={handleOrderPopup} />
-      <main className="flex-1 bg-gradient-to-b from-slate-950 via-slate-900 to-black">
+      <main className="flex-1 bg-gradient-to-b from-slate-950 via-slate-900 to-black overflow-x-hidden">
         <Routes>
           <Route
             path="/"
